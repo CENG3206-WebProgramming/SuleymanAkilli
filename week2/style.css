@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+.container{
+    background-color: red;
+    padding: 20px;
+    display: flex;
+    width: fit-content;
+    margin: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container>div{
+    padding: 10px 20px;
+}
+.container>div:nth-child(odd){
+    background-color: green;
+    color: white;
+}
+.container>div:nth-child(even){
+    background-color: white;
+}
