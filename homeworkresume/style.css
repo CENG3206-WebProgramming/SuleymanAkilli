@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+body{
+    margin: 0 250px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #979292;
+}
+.container{
+    display: flex;
+}
+.first-part{
+    flex-basis: 30%;
+    background-color: #335384;
+    color: white;
+    padding: 30px 15px;
+    
+}
+.second-part{
+    flex-basis: 70%;
+    padding: 30px 20px;
+    background-color: white;
+}
+
+.img-container{
+    text-align: center;
+}
+
+img{
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.first-part .contact-me ul{
+    list-style-type: none;
+}
+.title{
+    color: #335384;
+}
+
+.subtitle{
+color: #5ba7d1;
+}
+.project-link{
+color: black;
+}
+.dim{
+    color: #979292;
+    display: block;
+}
+.line{
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: black;
+}
