@@ -16,10 +16,10 @@
   // Part 3: Show the number of green in the hidden paragraph under the jar!
   // Hint: Use querySelectorAll, textContent, and classList.add with the provided .hidden class (implemented in CSS)
   function showAnswer() {
-      let length=qsa(".green")
+      let length=qsa(".green").length
       let pElement=document.getElementById("number-of-green-skittles-text")
-      let numberOfGreenSkittleText = document.getElementById("count")
       pElement.classList.remove("hidden")
+      let numberOfGreenSkittleText = document.getElementById("count")
       numberOfGreenSkittleText.innerHTML=length
 
     // 3.1. Write the statement to get all green skittles
@@ -32,8 +32,8 @@
   function fillJar() {
       console.log("filljar")
       var skittle = document.createElement("div");
+      skittle.classList.add("skittle",getRandomColor());
     var element = document.getElementById("jar");
-    skittle.classList.add("skittle","green");
     element.appendChild(skittle);
     // Create and add one "test" skittle (a div element with the classes ".skittle" and ".green")
     // 4.1. (no code) What function do we use to create a new DOM element?
@@ -46,10 +46,12 @@
   // Part 5: Get a random color for a skittle (we'll add more colors soon!)
   function getRandomColor() {
     let COLORS = ["red", "green", "blue"];
+    Math.floor(Math.random() * 3);
     // 5.1. Get a random integer number using length of
     // COLORS. Hint: Use Math.random() to get a number between [0, 1).
 
     // 5.2 Return a string at the random index of COLORS
+    return COLORS[Math.floor(Math.random() * 3)]
   }
 
   /* ----- Provided Shorthand Functions ------- */
@@ -75,7 +77,7 @@
    * @returns {object[]} array of DOM objects matching the query (empty if none).
    */
   function qsa(selector) {
-    return document.querySelectorAll(selector).length;
+    return document.querySelectorAll(selector);
   }
 
   /**
