@@ -1,5 +1,5 @@
 "use strict";
-(function() {
+(function () {
   // Part 1: Setting up the window load event listener to call init when page is loaded
   // 1.1. Write the event listener (one statement)
   window.addEventListener('load', () => {
@@ -16,11 +16,11 @@
   // Part 3: Show the number of green in the hidden paragraph under the jar!
   // Hint: Use querySelectorAll, textContent, and classList.add with the provided .hidden class (implemented in CSS)
   function showAnswer() {
-      let length=qsa(".green").length
-      let pElement=document.getElementById("number-of-green-skittles-text")
-      pElement.classList.remove("hidden")
-      let numberOfGreenSkittleText = document.getElementById("count")
-      numberOfGreenSkittleText.innerHTML=length
+    let length = qsa(".green").length
+    let pElement = document.getElementById("number-of-green-skittles-text")
+    pElement.classList.remove("hidden")
+    let numberOfGreenSkittleText = document.getElementById("count")
+    numberOfGreenSkittleText.innerHTML = length
 
     // 3.1. Write the statement to get all green skittles
     // 3.2. Update textContent of #count to include length of green skittles collection from 1.
@@ -30,9 +30,9 @@
   // Part 4: Planning out the populating of skittles in the jar (we'd eventually like
   //         to fill the jar automatically when the page is loaded!).
   function fillJar() {
-      console.log("filljar")
-      var skittle = document.createElement("div");
-      skittle.classList.add("skittle",getRandomColor());
+    console.log("filljar")
+    var skittle = document.createElement("div");
+    skittle.classList.add("skittle", getRandomColor());
     var element = document.getElementById("jar");
     element.appendChild(skittle);
     // Create and add one "test" skittle (a div element with the classes ".skittle" and ".green")
