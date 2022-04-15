@@ -17,7 +17,7 @@
   // Hint: Use querySelectorAll, textContent, and classList.add with the provided .hidden class (implemented in CSS)
   function showAnswer() {
     let length = qsa(".green").length
-    let pElement = document.getElementById("number-of-green-skittles-text")
+    let pElement = document.getElementById("game-play").lastElementChild
     pElement.classList.remove("hidden")
     let numberOfGreenSkittleText = document.getElementById("count")
     numberOfGreenSkittleText.innerHTML = length
@@ -32,7 +32,7 @@
   function fillJar() {
     console.log("filljar")
     var skittle = document.createElement("div");
-    skittle.classList.add("skittle", getRandomColor());
+    skittle.classList.add("skittle", "green");
     var element = document.getElementById("jar");
     element.appendChild(skittle);
     // Create and add one "test" skittle (a div element with the classes ".skittle" and ".green")
