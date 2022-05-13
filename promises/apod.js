@@ -35,7 +35,8 @@
         // TODO so fetching
         fetch(url)
             .then(response => response.json())
-            .then(data => processApodJson(data)).catch(err => handleRequestError(err))
+            .then(processApodJson)
+            .catch(handleRequestError)
     }
 
     /*
